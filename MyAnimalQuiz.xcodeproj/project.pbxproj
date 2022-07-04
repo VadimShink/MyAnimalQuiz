@@ -13,6 +13,7 @@
 		148ABC01287355890097AD21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148ABBFF287355890097AD21 /* Main.storyboard */; };
 		148ABC032873558B0097AD21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148ABC022873558B0097AD21 /* Assets.xcassets */; };
 		148ABC062873558B0097AD21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148ABC042873558B0097AD21 /* LaunchScreen.storyboard */; };
+		148ABC1328735B740097AD21 /* MyScreenAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148ABC1228735B740097AD21 /* MyScreenAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		148ABC022873558B0097AD21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		148ABC052873558B0097AD21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		148ABC072873558B0097AD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		148ABC1228735B740097AD21 /* MyScreenAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MyScreenAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		148ABBF8287355890097AD21 /* MyAnimalQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				148ABBF9287355890097AD21 /* AppDelegate.swift */,
-				148ABBFB287355890097AD21 /* SceneDelegate.swift */,
-				148ABBFD287355890097AD21 /* ViewController.swift */,
-				148ABBFF287355890097AD21 /* Main.storyboard */,
-				148ABC022873558B0097AD21 /* Assets.xcassets */,
-				148ABC042873558B0097AD21 /* LaunchScreen.storyboard */,
-				148ABC072873558B0097AD21 /* Info.plist */,
+				148ABC1028735AC30097AD21 /* Models */,
+				148ABC0F28735AA30097AD21 /* View Controllers */,
+				148ABC0D287359980097AD21 /* Storyboards */,
+				148ABC0E28735A5A0097AD21 /* Supporting Files */,
+				148ABC1128735ACA0097AD21 /* Resources */,
 			);
 			path = MyAnimalQuiz;
+			sourceTree = "<group>";
+		};
+		148ABC0D287359980097AD21 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				148ABBFF287355890097AD21 /* Main.storyboard */,
+				148ABC042873558B0097AD21 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		148ABC0E28735A5A0097AD21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				148ABBF9287355890097AD21 /* AppDelegate.swift */,
+				148ABBFB287355890097AD21 /* SceneDelegate.swift */,
+				148ABC072873558B0097AD21 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		148ABC0F28735AA30097AD21 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				148ABBFD287355890097AD21 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		148ABC1028735AC30097AD21 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		148ABC1128735ACA0097AD21 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				148ABC022873558B0097AD21 /* Assets.xcassets */,
+				148ABC1228735B740097AD21 /* MyScreenAssets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				148ABC1328735B740097AD21 /* MyScreenAssets.xcassets in Resources */,
 				148ABC062873558B0097AD21 /* LaunchScreen.storyboard in Resources */,
 				148ABC032873558B0097AD21 /* Assets.xcassets in Resources */,
 				148ABC01287355890097AD21 /* Main.storyboard in Resources */,
@@ -289,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5PA42A853Q;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyAnimalQuiz/Info.plist;
+				INFOPLIST_FILE = "MyAnimalQuiz/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -304,7 +348,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5PA42A853Q;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyAnimalQuiz/Info.plist;
+				INFOPLIST_FILE = "MyAnimalQuiz/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -332,7 +376,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
