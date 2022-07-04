@@ -212,9 +212,21 @@
                                         <rect key="frame" x="0.0" y="90.5" width="343" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                                        <connections>
+                                            <segue destination="lLC-VQ-wMT" kind="show" id="sqE-Ta-fRB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jIc-Yd-l9B">
+                                <rect key="frame" x="0.0" y="96" width="375" height="4"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какую пищу вы предпочитаете?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNj-Js-l2G">
+                                <rect key="frame" x="16" y="116" width="294.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ndJ-gF-zTL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -222,19 +234,19 @@
                             <constraint firstItem="37v-VC-IhR" firstAttribute="centerY" secondItem="fKI-16-OBj" secondAttribute="centerY" id="0HN-qj-ojO"/>
                             <constraint firstItem="4VL-vR-NgC" firstAttribute="leading" secondItem="ndJ-gF-zTL" secondAttribute="leading" constant="16" id="1Vc-Eh-jEX"/>
                             <constraint firstItem="ndJ-gF-zTL" firstAttribute="trailing" secondItem="J0H-Qc-8Lv" secondAttribute="trailing" constant="16" id="2dz-w6-kgb"/>
+                            <constraint firstItem="ndJ-gF-zTL" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kNj-Js-l2G" secondAttribute="trailing" symbolic="YES" id="3jF-nZ-XwZ"/>
                             <constraint firstItem="37v-VC-IhR" firstAttribute="leading" secondItem="ndJ-gF-zTL" secondAttribute="leading" constant="16" id="BaB-cj-P4Q"/>
                             <constraint firstItem="J0H-Qc-8Lv" firstAttribute="centerY" secondItem="fKI-16-OBj" secondAttribute="centerY" id="CXk-MC-RZh"/>
+                            <constraint firstItem="jIc-Yd-l9B" firstAttribute="top" secondItem="ndJ-gF-zTL" secondAttribute="top" id="VCz-jU-ihg"/>
+                            <constraint firstItem="kNj-Js-l2G" firstAttribute="leading" secondItem="ndJ-gF-zTL" secondAttribute="leading" constant="16" id="Va2-bw-eIN"/>
                             <constraint firstItem="ndJ-gF-zTL" firstAttribute="trailing" secondItem="4VL-vR-NgC" secondAttribute="trailing" constant="16" id="aXw-J5-8cd"/>
                             <constraint firstItem="J0H-Qc-8Lv" firstAttribute="leading" secondItem="ndJ-gF-zTL" secondAttribute="leading" constant="16" id="crJ-nT-vKn"/>
+                            <constraint firstItem="kNj-Js-l2G" firstAttribute="top" secondItem="jIc-Yd-l9B" secondAttribute="bottom" constant="16" id="ojA-ZM-94Q"/>
+                            <constraint firstItem="ndJ-gF-zTL" firstAttribute="trailing" secondItem="jIc-Yd-l9B" secondAttribute="trailing" id="prq-YI-gij"/>
+                            <constraint firstItem="jIc-Yd-l9B" firstAttribute="leading" secondItem="ndJ-gF-zTL" secondAttribute="leading" id="sk3-Pa-jOr"/>
                             <constraint firstItem="4VL-vR-NgC" firstAttribute="centerY" secondItem="fKI-16-OBj" secondAttribute="centerY" id="xou-2p-EDb"/>
                             <constraint firstItem="ndJ-gF-zTL" firstAttribute="trailing" secondItem="37v-VC-IhR" secondAttribute="trailing" constant="16" id="z2M-KH-h1r"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="J0H-Qc-8Lv"/>
-                                <exclude reference="4VL-vR-NgC"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="yjH-gu-8rT">
                         <barButtonItem key="backBarButtonItem" title="Back" id="sqA-R7-8Kt"/>
@@ -254,8 +266,32 @@
                     <view key="view" contentMode="scaleToFill" id="1y7-HH-IvL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZKQ-An-7o0">
+                                <rect key="frame" x="16" y="252" width="343" height="163"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы - 🐶!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJv-Wk-pf8">
+                                        <rect key="frame" x="65.5" y="0.0" width="212.5" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вам нравится быть с друзьями. Вы окружаете себя людьми, которые вам нравятся и всегда готовы помочь." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2P-k0-aH9">
+                                        <rect key="frame" x="17.5" y="102" width="308.5" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KjP-bx-7Q2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZKQ-An-7o0" firstAttribute="leading" secondItem="KjP-bx-7Q2" secondAttribute="leading" constant="16" id="Xrl-qG-tQm"/>
+                            <constraint firstAttribute="trailing" secondItem="ZKQ-An-7o0" secondAttribute="trailing" constant="16" id="qqp-2c-Krg"/>
+                            <constraint firstItem="ZKQ-An-7o0" firstAttribute="centerY" secondItem="1y7-HH-IvL" secondAttribute="centerY" id="ykG-a1-Fy3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результаты" id="NG0-kM-iGM">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="me9-84-m4h"/>
@@ -263,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBv-a4-W53" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2610" y="81"/>
+            <point key="canvasLocation" x="2608.8000000000002" y="80.50974512743629"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4gB-71-yoL">
@@ -284,6 +320,9 @@
             <point key="canvasLocation" x="833" y="81"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ns1-c8-ciU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
