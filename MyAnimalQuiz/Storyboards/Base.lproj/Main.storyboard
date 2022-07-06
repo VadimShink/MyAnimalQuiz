@@ -252,6 +252,8 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="sqA-R7-8Kt"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="myProgressView" destination="jIc-Yd-l9B" id="9q2-hd-vav"/>
+                        <outlet property="myQuestionLabel" destination="kNj-Js-l2G" id="HKx-lo-0Zy"/>
                         <segue destination="lLC-VQ-wMT" kind="show" identifier="showResult" id="ns1-c8-ciU"/>
                     </connections>
                 </viewController>

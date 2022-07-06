@@ -9,4 +9,7 @@ import UIKit
 
 class QuestionViewController: UIViewController {
     
+    @IBOutlet var myProgressView: UIProgressView!
+    @IBOutlet var myQuestionLabel: UILabel!
+    
 }
