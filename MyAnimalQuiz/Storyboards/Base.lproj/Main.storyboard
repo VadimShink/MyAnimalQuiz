@@ -284,6 +284,10 @@
                         <outletCollection property="myMultipleLabels" destination="T38-Ay-7Ae" collectionClass="NSMutableArray" id="4yO-IK-stj"/>
                         <outletCollection property="myRangeLabels" destination="mHH-vq-Fvg" collectionClass="NSMutableArray" id="xsg-Ik-bRX"/>
                         <outletCollection property="myRangeLabels" destination="wfz-57-Ybi" collectionClass="NSMutableArray" id="8PO-ko-hh2"/>
+                        <outletCollection property="myMultipleSwitches" destination="nmU-z2-0Oh" collectionClass="NSMutableArray" id="flC-0k-eh1"/>
+                        <outletCollection property="myMultipleSwitches" destination="5yf-VX-QaW" collectionClass="NSMutableArray" id="Cce-Hs-5at"/>
+                        <outletCollection property="myMultipleSwitches" destination="Xmx-Vj-fdU" collectionClass="NSMutableArray" id="9NA-Cu-PFg"/>
+                        <outletCollection property="myMultipleSwitches" destination="aaQ-7c-aMN" collectionClass="NSMutableArray" id="p2G-Fh-Yo2"/>
                         <segue destination="lLC-VQ-wMT" kind="show" identifier="showResult" id="ns1-c8-ciU"/>
                     </connections>
                 </viewController>

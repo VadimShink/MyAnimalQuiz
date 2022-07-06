@@ -11,7 +11,12 @@ class QuestionViewController: UIViewController {
     
     @IBOutlet var myProgressView: UIProgressView!
     @IBOutlet var myQuestionLabel: UILabel!
-    @IBOutlet var myRangedSlider: UISlider!
+    @IBOutlet var myRangedSlider: UISlider! {
+        didSet {
+            let answerCount = Float(currentAnswers.count - 1)
+            myRangedSlider.value = answerCount
+        }
+    }
     
     @IBOutlet var mySingleStackView: UIStackView!
     @IBOutlet var myMultipleStackView: UIStackView!
@@ -20,6 +25,8 @@ class QuestionViewController: UIViewController {
     @IBOutlet var mySingleButtons: [UIButton]!
     @IBOutlet var myMultipleLabels: [UILabel]!
     @IBOutlet var myRangeLabels: [UILabel]!
+    @IBOutlet var myMultipleSwitches: [UISwitch]!
+    
     
     // MARK: - Properties
     private let questions = Question.getQuestions()
@@ -38,8 +45,16 @@ class QuestionViewController: UIViewController {
         guard let currentIndex = mySingleButtons.firstIndex(of: sender) else { return }
         let currentAnswer = currentAnswers[currentIndex]
         answerChosen.append(currentAnswer)
+        
+        newQuestion()
     }
     @IBAction func myMultipleAnswerPressed() {
+        for (multipleSwitch, answer) in zip(myMultipleSwitches, currentAnswers) {
+            if multipleSwitch.isOn {
+                answerChosen.append(answer)
+            }
+        }
+        newQuestion()
     }
     
     @IBAction func myRangedButtonAnswerPressed() {
@@ -104,5 +119,15 @@ extension QuestionViewController {
         
         myRangeLabels.first?.text = answers.first?.text
         myRangeLabels.last?.text = answers.last?.text
+    }
+    
+    private func newQuestion() {
+        questionIndex += 1
+        
+        if questionIndex < questions.count {
+            updateUI()
+            return
+        }
+        performSegue(withIdentifier: "showResult", sender: nil)
     }
 }
