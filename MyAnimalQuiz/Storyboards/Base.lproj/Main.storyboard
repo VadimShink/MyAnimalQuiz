@@ -99,21 +99,33 @@
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="mySingleButtonAnswerPressed:" destination="7Po-di-F6A" eventType="touchUpInside" id="qnn-hb-oJ3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0g-wG-Ub4">
                                         <rect key="frame" x="0.0" y="56" width="343" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="mySingleButtonAnswerPressed:" destination="7Po-di-F6A" eventType="touchUpInside" id="bs1-0m-953"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uq-a1-LY6">
                                         <rect key="frame" x="0.0" y="112" width="343" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="mySingleButtonAnswerPressed:" destination="7Po-di-F6A" eventType="touchUpInside" id="qJi-f8-fqU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PcO-1B-Tlc">
                                         <rect key="frame" x="0.0" y="168" width="343" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="mySingleButtonAnswerPressed:" destination="7Po-di-F6A" eventType="touchUpInside" id="5Mv-ia-fnt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -182,6 +194,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="myMultipleAnswerPressed" destination="7Po-di-F6A" eventType="touchUpInside" id="TEc-kd-ECn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -213,6 +228,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
                                         <connections>
+                                            <action selector="myRangedButtonAnswerPressed" destination="7Po-di-F6A" eventType="touchUpInside" id="p10-f7-ojX"/>
                                             <segue destination="lLC-VQ-wMT" kind="show" id="sqE-Ta-fRB"/>
                                         </connections>
                                     </button>

@@ -24,6 +24,7 @@ class QuestionViewController: UIViewController {
     // MARK: - Properties
     private let questions = Question.getQuestions()
     private var questionIndex = 0
+    private var answerChosen: [Answer] = []
     private var currentAnswers: [Answer] {
         questions[questionIndex].answers
     }
@@ -31,6 +32,17 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+    }
+    
+    @IBAction func mySingleButtonAnswerPressed(_ sender: UIButton) {
+        guard let currentIndex = mySingleButtons.firstIndex(of: sender) else { return }
+        let currentAnswer = currentAnswers[currentIndex]
+        answerChosen.append(currentAnswer)
+    }
+    @IBAction func myMultipleAnswerPressed() {
+    }
+    
+    @IBAction func myRangedButtonAnswerPressed() {
     }
 }
 
@@ -63,18 +75,34 @@ extension QuestionViewController {
     private func showCurrentStackView(for type: ResponseType) {
         switch type {
         case .single:
-            showSingleStackView(for: currentAnswers)
+            showSingleStackView(with: currentAnswers)
         case .multiple:
-            break
+            showMultipleStackView(with: currentAnswers)
         case .range:
-            break
+            showRangedStackView(with: currentAnswers)
         }
     }
-    private func showSingleStackView(for answers: [Answer]) {
+    
+    private func showSingleStackView(with answers: [Answer]) {
         mySingleStackView.isHidden = false
         
         for (button, answer) in zip(mySingleButtons, answers) {
             button.setTitle(answer.text, for: .normal)
         }
+    }
+    
+    private func showMultipleStackView(with answers: [Answer]) {
+        myMultipleStackView.isHidden = false
+        
+        for (label, answer) in zip(myMultipleLabels, answers) {
+            label.text = answer.text
+        }
+    }
+    
+    private func showRangedStackView(with answers: [Answer]) {
+        myRangedStackView.isHidden = false
+        
+        myRangeLabels.first?.text = answers.first?.text
+        myRangeLabels.last?.text = answers.last?.text
     }
 }
