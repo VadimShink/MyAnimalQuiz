@@ -252,8 +252,22 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="sqA-R7-8Kt"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="myMultipleStackView" destination="4VL-vR-NgC" id="1fN-u0-P5n"/>
                         <outlet property="myProgressView" destination="jIc-Yd-l9B" id="9q2-hd-vav"/>
                         <outlet property="myQuestionLabel" destination="kNj-Js-l2G" id="HKx-lo-0Zy"/>
+                        <outlet property="myRangedSlider" destination="I7X-g6-ThG" id="5nF-2r-Pse"/>
+                        <outlet property="myRangedStackView" destination="37v-VC-IhR" id="hIe-b0-sXW"/>
+                        <outlet property="mySingleStackView" destination="J0H-Qc-8Lv" id="wrA-4z-oZW"/>
+                        <outletCollection property="mySingleButtons" destination="Nmh-Ee-Rvw" collectionClass="NSMutableArray" id="cpO-2w-R01"/>
+                        <outletCollection property="mySingleButtons" destination="P0g-wG-Ub4" collectionClass="NSMutableArray" id="j7I-wE-OdE"/>
+                        <outletCollection property="mySingleButtons" destination="2uq-a1-LY6" collectionClass="NSMutableArray" id="y3T-lI-HWb"/>
+                        <outletCollection property="mySingleButtons" destination="PcO-1B-Tlc" collectionClass="NSMutableArray" id="55C-Qp-j38"/>
+                        <outletCollection property="myMultipleLabels" destination="lXw-gL-u77" collectionClass="NSMutableArray" id="mV5-SB-fUb"/>
+                        <outletCollection property="myMultipleLabels" destination="u6s-LW-Wtb" collectionClass="NSMutableArray" id="gUp-3O-ctQ"/>
+                        <outletCollection property="myMultipleLabels" destination="DTt-2X-mJI" collectionClass="NSMutableArray" id="Jix-il-Xh5"/>
+                        <outletCollection property="myMultipleLabels" destination="T38-Ay-7Ae" collectionClass="NSMutableArray" id="4yO-IK-stj"/>
+                        <outletCollection property="myRangeLabels" destination="mHH-vq-Fvg" collectionClass="NSMutableArray" id="xsg-Ik-bRX"/>
+                        <outletCollection property="myRangeLabels" destination="wfz-57-Ybi" collectionClass="NSMutableArray" id="8PO-ko-hh2"/>
                         <segue destination="lLC-VQ-wMT" kind="show" identifier="showResult" id="ns1-c8-ciU"/>
                     </connections>
                 </viewController>
