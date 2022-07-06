@@ -229,7 +229,6 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
                                         <connections>
                                             <action selector="myRangedButtonAnswerPressed" destination="7Po-di-F6A" eventType="touchUpInside" id="p10-f7-ojX"/>
-                                            <segue destination="lLC-VQ-wMT" kind="show" id="sqE-Ta-fRB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -330,10 +329,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результаты" id="NG0-kM-iGM">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="me9-84-m4h"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="me9-84-m4h">
+                            <connections>
+                                <segue destination="IZh-zu-tsN" kind="unwind" unwindAction="unwindFor:" id="SfU-Yw-EI2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBv-a4-W53" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="IZh-zu-tsN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2608.8000000000002" y="80.50974512743629"/>
         </scene>
@@ -356,9 +360,6 @@
             <point key="canvasLocation" x="833" y="81"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ns1-c8-ciU"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

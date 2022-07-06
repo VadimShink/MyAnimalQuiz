@@ -46,7 +46,7 @@ class QuestionViewController: UIViewController {
         let currentAnswer = currentAnswers[currentIndex]
         answerChosen.append(currentAnswer)
         
-        newQuestion()
+        nextQuestion()
     }
     @IBAction func myMultipleAnswerPressed() {
         for (multipleSwitch, answer) in zip(myMultipleSwitches, currentAnswers) {
@@ -54,10 +54,13 @@ class QuestionViewController: UIViewController {
                 answerChosen.append(answer)
             }
         }
-        newQuestion()
+        nextQuestion()
     }
     
     @IBAction func myRangedButtonAnswerPressed() {
+        let index = Int(myRangedSlider.value)
+        answerChosen.append(currentAnswers[index])
+        nextQuestion()
     }
 }
 
@@ -121,7 +124,7 @@ extension QuestionViewController {
         myRangeLabels.last?.text = answers.last?.text
     }
     
-    private func newQuestion() {
+    private func nextQuestion() {
         questionIndex += 1
         
         if questionIndex < questions.count {
