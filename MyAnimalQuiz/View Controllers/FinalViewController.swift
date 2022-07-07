@@ -9,21 +9,31 @@ import UIKit
 
 class FinalViewController: UIViewController {
 
+    @IBOutlet var myAnimalTypeLabel: UILabel!
+    @IBOutlet var myDescriptionLabel: UILabel!
+    
+    var answers: [Answer]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationItem.hidesBackButton = true
+        let maxAnimal = getMaxAnimal()
+        updateUI(with: maxAnimal)
+    }
+}
+
+// MARK: - Private Methods
+
+extension FinalViewController {
+    private func getMaxAnimal() -> AnimalType? {
+        return Dictionary(grouping: answers, by: { $0.type })
+            .sorted(by: {$0.value.count > $1.value.count})
+            .first?.key
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func updateUI(with animal: AnimalType?) {
+        myAnimalTypeLabel.text = "Вы - \(animal?.rawValue ?? "🐶" )!"
+        myDescriptionLabel.text = animal?.definition ?? ""
     }
-    */
-
 }
